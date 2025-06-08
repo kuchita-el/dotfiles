@@ -1,3 +1,11 @@
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
+
+if (-not ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
+    Write-Host "このスクリプトは管理者権限で実行する必要があります。管理者として再度実行してください。" -ForegroundColor Red
+    Start-Process powershell.exe -Verb RunAs -ArgumentList "-File `"$PSCommandPath`""
+    Exit
+}
+
 Write-Host "===== Windows dotsfiles 設定スクリプトを開始します =====" -ForegroundColor Green
 
 # 1. WSLのインストールと有効化
