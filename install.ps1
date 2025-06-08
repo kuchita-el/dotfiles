@@ -106,6 +106,10 @@ Wait-ManualDownloadAndInstall -SoftwareName "Realforce Connect" -DownloadUrl "ht
 Write-Host "WL-UG69DK1のドライバをダウンロードします..." -ForegroundColor Yellow
 Wait-ManualDownloadAndInstall -SoftwareName "WL-UG69DK1のドライバ" -DownloadUrl "https://www.synaptics.com/products/displaylink-graphics/downloads/windows"
 
+# 6. Stream Deckのドライバをインストール
+Write-Host "Stream Deckのドライバをダウンロードします..." -ForegroundColor Yellow
+Wait-ManualDownloadAndInstall -SoftwareName "Stream Deckのドライバ" -DownloadUrl "https://elgato.com/download"
+
 function Wait-Action {
     param (
         [string]$action
@@ -116,7 +120,7 @@ function Wait-Action {
     } while ($userInput -ne 'y')
 }
 
-# 6. 1Passwordにログインする
+# 7. 1Passwordにログインする
 Write-Host "1Password CLIのセットアップを開始します..." -ForegroundColor Yellow
 Wait-Action -action "1Passwordにログインしてください。"
 Wait-Action -action "1PasswordでSSHエージェントを開始してください。"
