@@ -14,4 +14,6 @@
 
 以下の手順は、自分で操作する必要があります。
 
-1. Docker Desktopで、コンテナをUbuntu（WSL Distro）上で動かすように設定する。
+1. Docker Desktopで
+  1. Windows起動時にDocker Desktopを起動するように設定する。 
+  1. コンテナをUbuntu（WSL Distro）上で動かすように設定する。
