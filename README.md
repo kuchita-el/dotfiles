@@ -11,3 +11,7 @@
 7. 1Passwordを使ったGitのセットアップ
 
 ただし、4-6は手順をPowerShell上で案内して、ユーザーが手動で実施する仕様です。
+
+以下の手順は、自分で操作する必要があります。
+
+1. Docker Desktopで、コンテナをUbuntu（WSL Distro）上で動かすように設定する。
