@@ -26,6 +26,7 @@ $appsToInstall = @(
     "Microsoft.VisualStudioCode",
     "Microsoft.PowerShell", # 最新のPowerShell Core
     "Microsoft.WindowsTerminal",
+    "Miro.Miro",
     "Discord.Discord",
     "Amazon.Kindle",
     "AgileBits.1Password",
