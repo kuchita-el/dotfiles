@@ -129,3 +129,7 @@ Wait-Action -action "1Passwordで1PasswordCLIとの連携を有効にしてく�
 Wait-Action -action "1PasswordでGitコミットへの署名を有効にしてください。"
 
 Write-Host "===== Windows dotsfiles 設定スクリプトが完了しました =====" -ForegroundColor Green
+
+#8. Gitのデフォルトブランチを設定する。
+
+git config --global init.defaultBranch main
