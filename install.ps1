@@ -20,17 +20,18 @@ Write-Host "WSLのインストールが完了しました。システムを再�
 Write-Host "wingetで指定されたアプリケーションをインストールします..." -ForegroundColor Yellow
 
 $appsToInstall = @(
+    "AgileBits.1Password",
+    "AgileBits.1Password.CLI",
+    "Amazon.Kindle",
+    "Discord.Discord",
     "Docker.DockerDesktop",
+    "Elgato.StreamDeck",
     "Git.Git",
     "JetBrains.Toolbox",
     "Microsoft.VisualStudioCode",
     "Microsoft.PowerShell", # 最新のPowerShell Core
     "Microsoft.WindowsTerminal",
-    "Miro.Miro",
-    "Discord.Discord",
-    "Amazon.Kindle",
-    "AgileBits.1Password",
-    "AgileBits.1Password.CLI"
+    "Miro.Miro"
 )
 
 foreach ($app in $appsToInstall) {
@@ -107,10 +108,6 @@ Wait-ManualDownloadAndInstall -SoftwareName "Realforce Connect" -DownloadUrl "ht
 Write-Host "WL-UG69DK1のドライバをダウンロードします..." -ForegroundColor Yellow
 Wait-ManualDownloadAndInstall -SoftwareName "WL-UG69DK1のドライバ" -DownloadUrl "https://www.synaptics.com/products/displaylink-graphics/downloads/windows"
 
-# 6. Stream Deckのドライバをインストール
-Write-Host "Stream Deckのドライバをダウンロードします..." -ForegroundColor Yellow
-Wait-ManualDownloadAndInstall -SoftwareName "Stream Deckのドライバ" -DownloadUrl "https://elgato.com/download"
-
 function Wait-Action {
     param (
         [string]$action
@@ -121,7 +118,7 @@ function Wait-Action {
     } while ($userInput -ne 'y')
 }
 
-# 7. 1Passwordにログインする
+# 6. 1Passwordにログインする
 Write-Host "1Password CLIのセットアップを開始します..." -ForegroundColor Yellow
 Wait-Action -action "1Passwordにログインしてください。"
 Wait-Action -action "1PasswordでSSHエージェントを開始してください。"
