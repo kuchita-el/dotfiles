@@ -23,15 +23,22 @@ $appsToInstall = @(
     "AgileBits.1Password",
     "AgileBits.1Password.CLI",
     "Amazon.Kindle",
+    "Anthropic.ClaudeCode",
     "Discord.Discord",
     "Docker.DockerDesktop",
-    "Elgato.StreamDeck",
     "Git.Git",
     "JetBrains.Toolbox",
-    "Microsoft.VisualStudioCode",
+    "Microsoft.Edge",
     "Microsoft.PowerShell", # 最新のPowerShell Core
+    "Microsoft.PowerToys",
+    "Microsoft.VisualStudioCode",
     "Microsoft.WindowsTerminal",
-    "Miro.Miro"
+    "Miro.Miro",
+    "OpenJS.NodeJS.LTS",
+    "SlackTechnologies.Slack",
+    # ここから、デバイスドライバ周り
+    "Elgato.StreamDeck", # Steream Deck
+    "Logitech.OptionsPlus"
 )
 
 foreach ($app in $appsToInstall) {
