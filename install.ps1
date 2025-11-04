@@ -23,7 +23,6 @@ $appsToInstall = @(
     "AgileBits.1Password",
     "AgileBits.1Password.CLI",
     "Amazon.Kindle",
-    "Anthropic.ClaudeCode",
     "Discord.Discord",
     "Docker.DockerDesktop",
     "Git.Git",
@@ -34,7 +33,6 @@ $appsToInstall = @(
     "Microsoft.VisualStudioCode",
     "Microsoft.WindowsTerminal",
     "Miro.Miro",
-    "OpenJS.NodeJS.LTS",
     "SlackTechnologies.Slack",
     # ここから、デバイスドライバ周り
     "Elgato.StreamDeck", # Steream Deck
@@ -52,6 +50,10 @@ foreach ($app in $appsToInstall) {
     }
 }
 Write-Host "アプリケーションのインストールが完了しました。" -ForegroundColor Green
+
+Write-Host "Claude Codeをインストールします..." -ForegroundColor Green
+irm https://claude.ai/install.ps1 | iex
+Write-Host "Claude Codeのインストールが完了しました。" -ForegroundColor Green
 
 # 3. GitHub ReleaseからHackGenをダウンロードして、フォントをインストール
 Write-Host "HackGenフォントをダウンロードしてインストールします..." -ForegroundColor Yellow
