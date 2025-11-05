@@ -53,6 +53,10 @@ Write-Host "アプリケーションのインストールが完了しました�
 
 Write-Host "Claude Codeをインストールします..." -ForegroundColor Green
 irm https://claude.ai/install.ps1 | iex
+# claudeにPATHを通すために必要
+$newPath = "C:\Users\dkura\.local\bin\"
+$currentPath = [Environment]::GetEnvironmentVariable("Path", "User")
+[Environment]::SetEnvironmentVariable("Path", "$currentPath;$newPath", "User")
 Write-Host "Claude Codeのインストールが完了しました。" -ForegroundColor Green
 
 # 3. GitHub ReleaseからHackGenをダウンロードして、フォントをインストール
