@@ -26,6 +26,7 @@ $appsToInstall = @(
     "Discord.Discord",
     "Docker.DockerDesktop",
     "Git.Git",
+    "GitHub.cli",
     "JetBrains.Toolbox",
     "Microsoft.Edge",
     "Microsoft.PowerShell", # 最新のPowerShell Core
@@ -34,6 +35,7 @@ $appsToInstall = @(
     "Microsoft.WindowsTerminal",
     "Miro.Miro",
     "SlackTechnologies.Slack",
+    "Zen-Team.Zen-Browser",
     # ここから、デバイスドライバ周り
     "Elgato.StreamDeck", # Steream Deck
     "Logitech.OptionsPlus"
